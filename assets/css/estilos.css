@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+
+
+/*reset de ccs a html*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    min-height: 100%;
+}
+
+.contenedor > * {
+    box-shadow: -1px 1px 0px ;
+    text-align: center;  
+    padding: 50px;  
+    border-radius: 10px;
+}
+
+.header {
+    grid-area: *header;
+    background-color: aqua;
+}
+.nav {
+    grid-area: *nav;
+    background-color: red;
+}
+.aside {
+    grid-area: *aside;
+    background-color: green;
+}
+.article {
+    grid-area: *article;
+    background-color: yellow;
+}
+.footer {
+    grid-area: *footer;
+    background-color: pink;
+}
+
+.contenedor {
+    display: grid;
+    gap: 10px;
+    grid-template: 
+        "header" 100px
+        "nav" 100px
+        "article" auto
+        "aside" 100px
+        "footer" 100px;
+
+}
+
+@media (min-width:600px){
+    .contenedor{
+        grid-template: 
+        "header header" 100px
+        "nav nav" 100px
+        "article article" auto
+        "aside aside" 100px
+        "footer footer" 100px;
+    }
+}
